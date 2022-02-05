@@ -30,5 +30,19 @@
   </head>
   <body>
     <div class="container"><%- body %></div>
+    <% if (!currentUser) { %> 
+      <a href="/user/signin"> Sign in</a>
+      <% } %> 
+    
+    <% if (!currentUser) { %> 
+      <a href="/user/login"> Log in</a>
+
+      <% } %>
+
+    <% if (currentUser) { %> 
+      <a href="/user/logout">Log out</a>
+      <% } %>
+    
+      <a href="/">Home</a>
   </body>
 </html>
